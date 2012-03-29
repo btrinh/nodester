@@ -9,6 +9,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
       <![endif]-->
       <!-- Le styles -->
+      <link href="css/font.css" rel="stylesheet" type="text/css" />
       <link href="bootstrap.css" rel="stylesheet" type="text/css" />
       <style type="text/css">
          body {
@@ -38,9 +39,9 @@
       <div class="topbar">
          <div class="fill">
             <div class="container">
-               <a class="brand" href="index.html"><img src="images/rocket-md-right.png" width="20" /> nodester</a>
-               <ul class="nav">
-                  <li><a href="index.html">Home</a></li>
+               <a class="brand" href="index.html"><img src="images/rocket-md-right.png" width="40" /> <span>nodester</span></a>
+               <ul id="actions" class="nav off">
+                  <li class="active"><a href="index.html">Home</a></li>
                   <li><a href="api.html">API</a></li>
                   <li><a href="help.html">Help</a></li>
                   <li><a href="http://irc.nodester.com">IRC</a></li>
@@ -76,34 +77,35 @@
             <br />
             <h1>Nodesters Behind Nodester</h1>
             <p>Meet the Nodester Core Team! They are hacking at the speed of light using Node.JS to provide you with stable, enterprise Node.JS hosting options.</p>
-            <div class="row">
+            <div class="row hackers">
                <div class="span3">
-                  <img class="thumbnail" src="https://secure.gravatar.com/avatar/9f4580e51445f5b48eaeba23613c2393?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png" />
+                  <img class="thumbnail" src="https://secure.gravatar.com/avatar/9f4580e51445f5b48eaeba23613c2393?s=140&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png">
                </div>
-               <div class="span13">
-                  <h2>Chris Matthieu, Nodester Godfather <a href="http://twitter.com/chrismatthieu"><span class="label notice">Twitter</span></a> <a href="http://github.com/chrismatthieu"><span class="label">GitHub</span></a></h2>
+               <div class="span5">
+                  <h2>Chris Matthieu,<br> Nodester Godfather <a href="http://twitter.com/chrismatthieu"><span class="label notice">Twitter</span></a> <a href="http://github.com/chrismatthieu"><span class="label">GitHub</span></a></h2>
                   <p>Hacker</p>
                </div>
-            </div>
-            <!-- <div class="row">
                <div class="span3">
-                  <img class="thumbnail" src="http://i.imgur.com/PIwTW.jpg" width="140" height="140" />
+                     <img class="thumbnail" src="https://twimg0-a.akamaihd.net/profile_images/1911725199/180.png" width="140" height="140">
                </div>
-               <div class="span13">
-                  <h2>Contra, Nodester Core Contributor <a href="http://twitter.com/wearefractal"><span class="label notice">Twitter</span></a> <a href="http://github.com/contra"><span class="label">GitHub</span></a></h2>
-                  <p>Hacker</p>
-               </div>
-            </div> -->
-            <div class="row">
-               <div class="span3">
-                  <img class="thumbnail" src="https://twimg0-a.akamaihd.net/profile_images/1859874864/temp1330427952strip20120228-1354-1kd340n" width="140" height="140" />
-               </div>
-               <div class="span13">
+               <div class="span4">
                   <h2>Alejandro Morales, Nodester Core Contributor <a href="https://twitter.com/#!/_alejandromg"><span class="label notice">Twitter</span></a> <a href="http://github.com/alejandromg"><span class="label">GitHub</span></a></h2>
-                  <p>Hacker</p>
+                   <p>Hacker</p>
                </div>
             </div>
-
+            <div class="row hackcont">
+               <h2> And our contributors</h2>
+               <ul id="contrib">
+               <li><a href="https://twitter.com/arvidkahldev">Arvid Khal</a>,</li>
+                <li><a href="http://twitter.com/wearefractal">Contra</a>,</li>
+                <li><a href="https://github.com/DanBUK">DanBUK</a>,</li>
+                <li><a href="https://github.com/davglass">davglass</a>,</li>
+                <li><a href="https://twitter.com/kev_nz">kev_nz</a>,</li>
+                <li><a href="https://twitter.com/krwindham">krwindham </a>,</li>
+                <li><a href="https://github.com/microp11">microp11</a>,</li>
+                <li><a href="https://github.com/nodester">&lt;your_name_here1&gt;</a>...</li>
+               </ul>
+            </div>
             <h1>Promote Nodester!</h1>
 			<p>You can help us get the word out about of free and open source node.js platform-as-a-service via the following social networks:</p>
             <div class="row">
@@ -115,28 +117,37 @@
                </div>
             </div>
 
-            <!-- <div class="row">
-               <div class="span3">
-               <img class="thumbnail" src="https://secure.gravatar.com/avatar/bf76ab3ccd70705a0250caa6ec2402bf?s=140&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png">
-               </div>
-               <div class="span13">
-                 <h2>Marcosvm</h2>
-                  <p>Hacker</p>
-               </div>
-               </div> -->
+
          </div>
       </div>
       <!-- /container -->
-      <footer class="footer">
+ <footer class="footer">
          <div class="container">
             <p>
-               &#169; <script type="text/javascript">
+               <a href="/help">help</a> &middot;
+               <a href="/about">about us</a> &middot;
+               &#169; 2011 - <script type="text/javascript">
                   var theDate=new Date()
                       document.write(theDate.getFullYear())
-               </script> Nodester, inc. | <a href="about.html">about us</a> | <a href="http://twitter.com/nodester">twitter</a> | <a href="http://github.com/nodester">github</a>
+               </script> Nodester, inc.  &middot; 
+               <a href="//twitter.com/nodester">twitter</a> &middot;
+               <a href="//github.com/nodester">github</a>
             </p>
          </div>
       </footer>
+      <script type="text/javascript">
+       $(document).ready(function(){
+          var topbar = $('.fill')
+          var ul = $('#actions')
+          ul.removeClass('off')
+          ul.fadeOut(500)
+          topbar.hover(function(e){
+             ul.fadeIn(300)
+          }, function(){
+             ul.fadeOut(300);
+          })
+       });
+      </script>
    </body>
 </html>
 
