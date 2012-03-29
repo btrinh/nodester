@@ -18,7 +18,7 @@ var express = require('express'),
     middle  = require('./lib/middle'),
     stats   = require('./lib/stats');
 
-var daemon = require('daemon');
+//var daemon = require('daemon');
 // daemon.setreuid(config.opt.userid);
 var myapp = express.createServer();
 
@@ -92,8 +92,11 @@ function getStats(){
 
 setInterval(function(){
   mesh.emit('nodester::ping',{date:new Date})
-  mesh.emit('nodester::stats',getStats());
 },3000);
+
+setInterval(function(){
+  mesh.emit('nodester::stats',getStats())
+}, 5000);
 
 
 
@@ -112,7 +115,13 @@ myapp.get('/', function (req, res, next) {
 });
 
 myapp.get('/api', function (req, res, next) {
-  res.redirect('/api.html');
+  res.sendfile(__dirname +'/public/api.html');
+});
+myapp.get('/help', function (req, res, next) {
+  res.sendfile(__dirname +'/public/help.html');
+});
+myapp.get('/about', function (req, res, next) {
+  res.sendfile(__dirname +'/public/about.html');
 });
 
 myapp.get('/admin', function (req, res, next) {
