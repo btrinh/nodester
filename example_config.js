@@ -4,13 +4,13 @@ exports.opt = {
   couch_host: '127.0.0.1',
   couch_port: 5984,
   couch_prefix: 'nodester',
-  couch_tables: ['coupons', 'nodefu', 'nextport', 'apps', 'repos', 'aliasdomains', 'password_resets'],
+  couch_tables: ['coupons', 'nodefu', 'nextport', 'apps', 'repos', 'aliasdomains', 'password_resets', 'admins'],
   home_dir: '/var/nodester',
   app_dir: '/var/nodester/nodester',
   git_home_dir: '/git',
   apps_home_dir: '/app',
   public_html_dir: '/var/nodester/nodester/public',
-  proxy_table_file: '/var/nodester/var/proxy_table.json',
+  proxy_table_file: '/var/nodester/nodester/var/proxy_table.json',
   tl_dom: 'testnodester.com',
   api_dom: 'api.testnodester.com',
   git_user: 'nodester',
@@ -31,5 +31,12 @@ exports.opt = {
     AWSAccessKeyID: 'ACCESSKEY',
     AWSSecretKey: 'SECRETKEY',
     ServiceUrl: 'https://email.us-east-1.amazonaws.com',
+  }
+
+  redis: {
+    host: '127.0.0.1',
+    port: '6379',
+    user: 'nodester',
+    auth: 'exampleauth'
   }
 };
